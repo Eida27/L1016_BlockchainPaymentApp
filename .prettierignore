@@ -1,0 +1,13 @@
+node_modules
+.pnpm-store
+.next
+dist
+dist-test
+coverage
+pnpm-lock.yaml
+next-env.d.ts
+docs/GAMING_MARKETPLACE_CODEX_IMPLEMENTATION_PLAN.md
+
+tmp
+playwright-report
+test-results

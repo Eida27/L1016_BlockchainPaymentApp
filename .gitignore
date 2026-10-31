@@ -1,0 +1,53 @@
+# Local configuration and secrets; example templates remain reviewable.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+.secrets/
+secrets/
+wallets/
+keystore/
+
+# Dependencies and generated application outputs.
+node_modules/
+.pnpm-store/
+.next/
+out/
+dist/
+build/
+coverage/
+.turbo/
+*.tsbuildinfo
+
+# Foundry generated artifacts (source and lockfiles remain visible).
+packages/contracts/cache/
+packages/contracts/broadcast/
+
+# Local logs, caches and temporary outputs.
+*.log
+.cache/
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# Local database snapshots; SQL migrations are intentionally not ignored.
+*.dump
+*.backup
+*.sqlite
+*.sqlite3
+database-dumps/
+backups/
+
+# Do not add blanket docs, evidence, JSON, SQL, or lockfile exclusions.
+
+# Phase 01 generated test outputs.
+**/dist-test/
+playwright-report/
+test-results/

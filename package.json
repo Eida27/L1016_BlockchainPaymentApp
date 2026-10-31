@@ -1,0 +1,32 @@
+{
+  "name": "gametrust",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.22.1 <25",
+    "pnpm": "11.25.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @gametrust/shared build && pnpm --filter @gametrust/api build && node scripts/dev.mjs",
+    "build": "pnpm --filter @gametrust/shared build && pnpm --filter @gametrust/api build && pnpm --filter @gametrust/web build",
+    "lint": "eslint . --max-warnings=0",
+    "format:check": "prettier . --check",
+    "format": "prettier . --write",
+    "typecheck": "pnpm --filter @gametrust/shared build && pnpm --filter @gametrust/api typecheck && pnpm --filter @gametrust/web typecheck",
+    "test": "pnpm --filter @gametrust/shared build && pnpm --filter @gametrust/shared test && pnpm --filter @gametrust/api test && pnpm --filter @gametrust/web test"
+  },
+  "dependencies": {
+    "@gametrust/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.10.1",
+    "eslint": "10.13.0",
+    "globals": "16.5.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1",
+    "@next/eslint-plugin-next": "16.4.3"
+  }
+}
